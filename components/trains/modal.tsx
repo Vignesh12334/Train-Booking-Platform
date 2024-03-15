@@ -14,7 +14,7 @@ export const AddUser = () => {
    return (
       <>
          <Button auto onClick={handler}>
-            Add User
+            Add Train
          </Button>
          <Modal
             closeButton
@@ -25,7 +25,7 @@ export const AddUser = () => {
          >
             <Modal.Header css={{justifyContent: 'start'}}>
                <Text id="modal-title" h4>
-                  Add new user
+                  Add new train
                </Text>
             </Modal.Header>
             <Divider css={{my: '$5'}} />
@@ -35,7 +35,7 @@ export const AddUser = () => {
                   css={{
                      'flexWrap': 'wrap',
                      'gap': '$8',
-                     '@lg': {flexWrap: 'nowrap', gap: '$12'},
+                     '@lg': {flexWrap: 'nowrap', gap: '$12'}
                   }}
                >
                   <Flex
@@ -46,20 +46,20 @@ export const AddUser = () => {
                      }}
                   >
                      <Input
-                        label="First Name"
+                        label="Train name"
                         bordered
                         clearable
                         fullWidth
                         size="lg"
-                        placeholder="First Name"
+                        placeholder="Train name"
                      />
                      <Input
-                        label="Last Name"
+                        label="Train number"
                         clearable
                         bordered
                         fullWidth
                         size="lg"
-                        placeholder="Last Name"
+                        placeholder="Train number"
                      />
                   </Flex>
 
@@ -71,20 +71,20 @@ export const AddUser = () => {
                      }}
                   >
                      <Input
-                        label="Email"
+                        label="Source"
                         clearable
                         bordered
                         fullWidth
                         size="lg"
-                        placeholder="Email"
+                        placeholder="Source"
                      />
                      <Input
-                        label="Phone Number"
+                        label="Destination "
                         clearable
                         bordered
                         fullWidth
                         size="lg"
-                        placeholder="Phone Number"
+                        placeholder="Destination "
                      />
                   </Flex>
                   <Flex
@@ -94,29 +94,13 @@ export const AddUser = () => {
                         '@lg': {flexWrap: 'nowrap'},
                      }}
                   >
-                     <Input
-                        label="Department"
-                        clearable
-                        bordered
-                        fullWidth
-                        size="lg"
-                        placeholder="Department"
-                     />
-                     <Input
-                        label="Company"
-                        clearable
-                        bordered
-                        fullWidth
-                        size="lg"
-                        placeholder="Company"
-                     />
                   </Flex>
                </Flex>
             </Modal.Body>
             <Divider css={{my: '$5'}} />
             <Modal.Footer>
                <Button auto onClick={closeHandler}>
-                  Add User
+                  Add Train
                </Button>
             </Modal.Footer>
          </Modal>

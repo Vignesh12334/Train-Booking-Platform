@@ -1,9 +1,10 @@
 import {Table} from '@nextui-org/react';
 import React from 'react';
 import {Box} from '../styles/box';
-import {columns, users} from './data';
+import {trains, trainData} from './data';
 import {RenderCell} from './render-cell';
-
+// TODO: Add props here => Columns, Body(users), pageCount
+// 
 export const TableWrapper = () => {
    return (
       <Box
@@ -24,18 +25,18 @@ export const TableWrapper = () => {
             }}
             selectionMode="multiple"
          >
-            <Table.Header columns={columns}>
-               {(column) => (
+            <Table.Header columns={trains}>
+               {(trains) => (
                   <Table.Column
-                     key={column.uid}
-                     hideHeader={column.uid === 'actions'}
-                     align={column.uid === 'actions' ? 'center' : 'start'}
+                     key={trains.uid}
+                     hideHeader={trains.uid === 'actions'}
+                     align={trains.uid === 'actions' ? 'center' : 'start'}
                   >
-                     {column.name}
+                     {trains.name}
                   </Table.Column>
                )}
             </Table.Header>
-            <Table.Body items={users}>
+            <Table.Body items={trainData}>
                {(item) => (
                   <Table.Row>
                      {(columnKey) => (
@@ -50,7 +51,7 @@ export const TableWrapper = () => {
                shadow
                noMargin
                align="center"
-               rowsPerPage={8}
+               rowsPerPage={4}
                onPageChange={(page) => console.log({page})}
             />
          </Table>
