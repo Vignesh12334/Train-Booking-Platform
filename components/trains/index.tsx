@@ -11,7 +11,7 @@ import {UsersIcon} from '../icons/breadcrumb/users-icon';
 import {SettingsIcon} from '../icons/sidebar/settings-icon';
 import {Flex} from '../styles/flex';
 import {TableWrapper} from '../table/table';
-import {AddUser} from './add-user';
+import {AddUser} from './modal';
 
 /* 
 This is the account page right? CRUD
@@ -21,7 +21,13 @@ So better lets take a copy and wrok, What do you say? How to do that?
 
 **/
 
-export const Accounts = () => {
+
+export const Trains = () => {
+
+   const TrainData  = () : any =>  {
+      
+   } 
+
    return (
       <Flex
          css={{
@@ -54,7 +60,7 @@ export const Accounts = () => {
             </Crumb>
          </Breadcrumbs>
 
-         <Text h3>All Accounts</Text>
+         <Text h3>All Trains</Text>
          <Flex
             css={{gap: '$8'}}
             align={'center'}
@@ -71,7 +77,7 @@ export const Accounts = () => {
             >
                <Input
                   css={{width: '100%', maxW: '410px'}}
-                  placeholder="Search users"
+                  placeholder="Search trains"
                />
                <SettingsIcon />
                <TrashIcon />
@@ -79,14 +85,16 @@ export const Accounts = () => {
                <DotsIcon />
             </Flex>
             <Flex direction={'row'} css={{gap: '$6'}} wrap={'wrap'}>
-               <AddUser />
+
+               <AddUser />   
+
                <Button auto iconRight={<ExportIcon />}>
                   Export to CSV
                </Button>
             </Flex>
          </Flex>
 
-         <TableWrapper />
+         <TableWrapper /> 
       </Flex>
    );
 };
